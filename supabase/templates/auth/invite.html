@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>You've been invited to LabLink</title>
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background-color: #f5f7fb;
+        color: #111827;
+        padding: 24px;
+      }
+      .card {
+        max-width: 640px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 999px;
+        text-decoration: none;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+      }
+      p {
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p>Hi there,</p>
+      <p>
+        You have been invited to join <strong>LabLink</strong>. Click the button below to accept your
+        invitation and finish setting up your secure account.
+      </p>
+      <p style="text-align: center; margin: 32px 0">
+        <a class="cta" href="{{ .ConfirmationURL }}" target="_blank" rel="noopener noreferrer">
+          Accept invitation
+        </a>
+      </p>
+      <p>
+        The link above will expire in 24 hours. If it stops working, request a fresh invite from your
+        LabLink administrator.
+      </p>
+      <p style="color: #6b7280; font-size: 0.9rem">
+        If the button doesn't work, copy and paste this link in your browser:<br />
+        {{ .ConfirmationURL }}
+      </p>
+      <p>— The LabLink Platform Team</p>
+    </div>
+  </body>
+</html>
