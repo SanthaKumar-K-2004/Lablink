@@ -48,6 +48,8 @@ supabase db push
 
 - [Supabase Setup Guide](docs/SUPABASE_SETUP.md) — install CLI, run `supabase start`, verify schema
 - [Database Schema](docs/DATABASE_SCHEMA.md) — ER diagram, helper functions, storage policies
+- [Edge Functions](docs/EDGE_FUNCTIONS.md) — API contracts for QR signing/validation and notifications
+- [Scheduled Jobs](docs/SCHEDULED_JOBS.md) — cron schedules, logic, and manual testing steps
 - [Troubleshooting](docs/TROUBLESHOOTING.md) — common errors and fixes
 
 For questions or follow-up tasks, review the documentation above or open an issue in this repo.
