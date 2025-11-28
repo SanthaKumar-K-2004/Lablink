@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirm your LabLink email</title>
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background-color: #f5f7fb;
+        color: #111827;
+        padding: 24px;
+      }
+      .card {
+        max-width: 640px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 999px;
+        text-decoration: none;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+      }
+      p {
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p>Hi {{ .Name }},</p>
+      <p>Welcome to <strong>LabLink</strong> — your lab access, inventory, and safety management platform.</p>
+      <p>
+        Before you can access your lab equipment, please verify your email address by clicking the
+        button below:
+      </p>
+      <p style="text-align: center; margin: 32px 0">
+        <a class="cta" href="{{ .ConfirmationURL }}" target="_blank" rel="noopener noreferrer">
+          Confirm email address
+        </a>
+      </p>
+      <p>This link will expire in 1 hour. If it stops working, request a new confirmation.</p>
+      <p style="color: #6b7280; font-size: 0.9rem">
+        If the button doesn't work, copy and paste this link in your browser:<br />
+        {{ .ConfirmationURL }}
+      </p>
+      <p>— The LabLink Platform Team</p>
+    </div>
+  </body>
+</html>
