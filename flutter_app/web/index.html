@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="LabLink - Lab Asset Management System">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="theme-color" content="#0891B2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="LabLink">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>LabLink - Lab Asset Management</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value of `window.location.pathname` in your app at build-time is `/`, so if you
+    // need to support app links to a different origin, edit `web/app_config.js` to
+    // point to the origin you will have at runtime, and change *both* values (in
+    // `web/app_config.js` and here) to begin with the proper origin and path prefix
+    // as needed.
+    // Even more complex? Create a configuration endpoint that returns the correct
+    // values for the `baseHref`, `apiServerUrl`, and other properties as documented
+    // by the Flutter web app engine.
+    window.appConfig ??= {};
+    Object.assign(window.appConfig, {
+      baseHref: '/',
+      apiServerUrl: 'http://localhost:54321',
+    });
+  </script>
+
+  <script>
+    window.flutterWebRenderer = "canvaskit";
+  </script>
+
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.body.style.margin = '0';
+      document.body.style.padding = '0';
+    });
+  </script>
+
+  <script>
+    _flutter.loader.loadEntrypoint({
+      onEntrypointLoaded: function(engineInitializer) {
+        engineInitializer.initializeEngine().then(function(appRunner) {
+          appRunner.runApp();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

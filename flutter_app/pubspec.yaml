@@ -1,0 +1,112 @@
+name: lablink
+description: Modern lab asset, compliance, and access management powered by Supabase.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  riverpod: ^2.4.0
+  flutter_riverpod: ^2.4.0
+  riverpod_generator: ^2.3.0
+
+  # Navigation
+  go_router: ^9.0.0
+
+  # Backend
+  supabase_flutter: ^1.10.0
+  supabase: ^2.0.0
+
+  # Environment & Configuration
+  flutter_dotenv: ^5.1.0
+
+  # Storage & Security
+  flutter_secure_storage: ^9.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.0
+
+  # Serialization
+  equatable: ^2.0.5
+  freezed_annotation: ^2.4.0
+  json_annotation: ^4.8.0
+  json_serializable: ^6.7.0
+
+  # Localization
+  intl: ^0.19.0
+
+  # Networking & Connectivity
+  connectivity_plus: ^5.0.0
+  dio: ^5.3.0
+
+  # Device & Platform
+  device_info_plus: ^9.1.0
+  permission_handler: ^11.4.0
+
+  # Image & Media
+  image_picker: ^1.0.0
+  cached_network_image: ^3.3.0
+
+  # QR Code
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^3.5.0
+
+  # Notifications
+  flutter_local_notifications: ^17.1.0
+  firebase_messaging: ^14.6.0
+  firebase_core: ^2.24.0
+
+  # Data Visualization
+  fl_chart: ^0.64.0
+
+  # Utilities & Logging
+  logger: ^2.0.0
+  sentry_flutter: ^7.14.0
+
+  # UI & Icons
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+
+  # Testing & Mocking
+  mockito: ^5.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.0
+  freezed: ^2.4.0
+  riverpod_generator: ^2.3.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/logos/
+    - assets/images/illustrations/
+    - assets/images/icons/
+    - .env
+    - .env.prod
+    - .env.staging
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/inter/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+          weight: 700
